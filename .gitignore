@@ -1,0 +1,9 @@
+.vscode/
+
+*.sketch
+
+
+*.xd
+*.fig
+
+.DS_Store

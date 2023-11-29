@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    /* colors */
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --dessaturate-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    /* font size */
+    --size: 18px;
+    /* font family */
+    --specimen: 'Manrope', sans-serif; /* 500, 700*/
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: var(--specimen);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grayish-blue);
+    color: var(--dessaturate-dark-blue);
+    padding: 1em;
+    font-size: 0.8125rem;
+}
+
+.main {
+    max-width: 700px;
+    display: flex;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.img-left {
+    object-fit: cover;
+    max-width: 40%;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.section-text {
+    padding: 1em 2em;
+}
+
+.text {
+    padding: 1.5em 1em;
+}
+
+.text h1 {
+    margin: 10px 0px;
+}
+
+.creditos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+}
+
+.perfil-img {
+    border-radius: 50%;
+    max-width: 40px;
+    margin-left: 15px;
+}
+
+.info {
+    margin-left: 1em;
+    font-weight: bold;
+    color: var(--very-dark-grayish-blue);
+}
+
+.date {
+    display: block;
+    font-family: 500;
+    color: var(--dessaturate-dark-blue);
+    font-size: 0.6875rem;
+}
+
+.share-icon {
+    height: 30px;
+    width: 30px;
+    background-color: var(--light-grayish-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.share-iconos {
+    position: relative;
+}
+
+.social {
+    background-color: var(--very-dark-grayish-blue);
+    position: absolute;
+    top: -70px;
+    right: -80px;
+    padding: 1em;
+    border-radius: .5em;
+    display: none;
+}
+
+.iconos {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.iconos > p {
+    text-transform: uppercase;
+    color: var(--dessaturate-dark-blue);
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.social::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: 10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid var(--very-dark-grayish-blue);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent
+}
+
+.share-icon:hover {
+    background-color: var(--grayish-blue);
+}
+
+.mostrar {
+    display: block;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    padding: 1em;
+}
+
+.attribution > a {
+    text-decoration: none;
+    color: blue;
+    transition: color 0.3s ease;
+}
+
+.attribution > a:hover {
+    color: purple;
+}
+
+@media screen and (max-width: 528px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    .img-left {
+        object-fit: cover;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 1em;
+        max-width: 100%;
+        max-height: 250px;
+    }
+
+    .section-text {
+        margin-bottom: 0;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .text {
+        padding: 1em;
+    }
+
+    .creditos {
+        position: relative;
+    }
+
+    .social {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        position: absolute;
+        bottom: -30px;
+        right: -20px;
+        top: -8px;
+        width: 400px;
+        
+    }
+
+    .share-icon {
+        z-index: 20;
+        position: relative;
+        top: 10px;
+    }
+
+    .iconos {
+        align-items: center;
+        margin: 10px 0px;
+    }
+
+    .social::after {
+        border-top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
