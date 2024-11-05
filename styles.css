@@ -12,7 +12,7 @@
     --specimen: 'Manrope', sans-serif; /* 500, 700*/
 }
 
-*, ::after, ::before{
+*, *::after, *::before{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -25,10 +25,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: var(--light-grayish-blue);
     color: var(--dessaturate-dark-blue);
     padding: 1em;
     font-size: 0.8125rem;
+    margin: 1.4rem 0rem;
 }
 
 .main {
@@ -151,9 +153,8 @@ body {
 }
 
 .attribution {
-    position: absolute;
-    bottom: 0;
     padding: 1em;
+    text-align: center;
 }
 
 .attribution > a {
